@@ -1,3 +1,4 @@
+/* ✅ style.css */
 * {
   margin: 0;
   padding: 0;
@@ -9,26 +10,23 @@ body {
   background-color: #222831;
   overflow-x: hidden;
 }
-.all{
-    font-family: "Roboto", sans-serif;
+.all {
+  font-family: "Roboto", sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px auto;
-  
 }
 .container {
   width: 40vw;
-  border: 2px solid black;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
   border-radius: 60px;
   background-color: #948979;
-  border: none;
-  outline: none;
 }
 h1 {
   margin-top: 20px;
@@ -40,8 +38,6 @@ input {
   border-radius: 40px;
   border: 2px solid black;
   outline: none;
-}
-#input {
   padding: 10px;
 }
 #btn {
@@ -53,13 +49,13 @@ input {
   font-size: 18px;
   font-weight: 600;
   background-color: #393e46;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  color: #fff;
   border: 2px solid black;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 #btn:hover {
   background-color: #191e25;
   cursor: pointer;
-  color: #fcfcfc;
 }
 #btn:active {
   transform: scale(0.95);
@@ -67,31 +63,28 @@ input {
 
 #listcontainer {
   width: 100%;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
   margin-left: 12.5vw;
   margin-bottom: 5vh;
   display: flex;
   flex-direction: column;
   gap: 15px;
+  list-style-type: none;
 }
 
 ul li {
+  position: relative;
   width: 60%;
-  height: 5vh;
-  padding: 20px;
-  border: 2px solid rgb(115, 109, 109);
+  height: auto;
   display: flex;
   align-items: center;
+  border: 2px solid rgb(115, 109, 109);
   background-color: #393e46;
   color: #fcfcfc;
   font-size: 16px;
   font-weight: 600;
   border-radius: 40px;
-   white-space: nowrap;
+  padding: 10px 60px 10px 40px;
   overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 ul li::before {
@@ -99,40 +92,39 @@ ul li::before {
   width: 20px;
   height: 20px;
   margin-right: 10px;
-  display: inline-block;
   background-image: url("assets/unchecked.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  flex-shrink: 0;
 }
+
 ul li.checked::before {
-  content: "";
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-  display: inline-block;
   background-image: url("assets/checked.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
-ul li.checked {
+ul li.checked p {
   text-decoration: line-through;
   color: #ffffff;
 }
+
+ul li p {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 ul li span {
   position: absolute;
-  right: 39vw;
+  right: 15px;
   font-size: 20px;
-  width: 39px;
-  height: 37px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  transition: background-color 0.3s ease, color 0.3s ease;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-shrink: 0;
-
+  transition: background-color 0.3s ease;
 }
 ul li span:hover {
   background-color: #191e25;
